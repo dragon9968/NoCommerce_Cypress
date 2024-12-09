@@ -14,7 +14,7 @@ describe('Register Page', () => {
     })
   });
 
-/*   it('TC_01_Register_Empty_Data ', () => {
+   it('TC_01_Register_Empty_Data ', () => {
     cy.wait(1000);
     homePage.MENU_ACCOUNT_LINK.click();
     cy.wait(1000);
@@ -22,9 +22,9 @@ describe('Register Page', () => {
     cy.wait(1000);
     registerPage.Registerbtn.click();
     registerPage.validationRegisterError('This is a required field.');
-   }) */
+   })
 
- /*   it('TC_02_Register_Invalid_Email ', function() {
+    it('TC_02_Register_Invalid_Email ', function() {
     cy.wait(1000);
     homePage.MENU_ACCOUNT_LINK.click();
     cy.wait(1000);
@@ -37,7 +37,7 @@ describe('Register Page', () => {
     //expect($input[0].validationMessage).to.eq('Please include an \'@\' in the email address. \'long\' is missing an \'@\'.');
  // })
 
-  })  */
+  })  
 
   it('TC_03_Register_Success', function() {
     cy.wait(1000);
@@ -51,8 +51,6 @@ describe('Register Page', () => {
       this['data'].email,
       this['data'].password,
       this['data'].confirm_password);
-    
-
   }) 
 
 })
