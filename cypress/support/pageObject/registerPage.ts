@@ -74,7 +74,11 @@ class registerPage {
             expect($input[0].validationMessage).to.eq(errorMessage);
           })
     }
-    
+
+    public validationEmailSuccessMessage(successMessage: String) {
+        this.REGISTER_SUCCESS_MESSAGE.should('have.text',successMessage);
+    }
+
     public enterToEmailtxt(email: string){
         this.Emailtxt.type(email);
     }
