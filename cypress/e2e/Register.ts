@@ -51,6 +51,9 @@ describe('Register Page', () => {
       this['data'].email,
       this['data'].password,
       this['data'].confirm_password);
+      registerPage.validationEmailSuccessMessage("Thank you for registering with Main Website Store.");
+      cy.wait(1000);
+      homePage.LOGOUT_LINK.click()
   }) 
 
 })
