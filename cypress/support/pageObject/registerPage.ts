@@ -52,7 +52,7 @@ class registerPage {
         this.Firstnametxt.type(firstName);
         this.Middlenametxt.type(middleName);
         this.Lastnametxt.type(lastName);
-        this.Emailtxt.type(email + this.emailID_Alpha_Numeric() +'@qa.team');
+        this.Emailtxt.type(email + cy.emailID_Alpha_Numeric +'@qa.team');
         this.Passwordtxt.type(password);
         this.ConfirmPasswordtxt.type(confirmPassword);
         this.Subcribedchk.click();
@@ -76,18 +76,15 @@ class registerPage {
     }
     
     public enterToEmailtxt(email: string){
-        this.Emailtxt.type(email);
+        this.Emailtxt.type(email + cy.emailID_Alpha_Numeric +'@qa.team');
     }
-
-    public emailID_Alpha_Numeric() {
-        var text = "";
-        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    
-        for (var i = 0; i < 5; i++)
-          text += possible.charAt(Math.floor(Math.random() * possible.length));
-    
-        return text;
-      }
+    public enterToPasswordtxt(password: string){
+        this.Passwordtxt.type(password);
+    }
+    public enterToConfirmPasswordtxt(confirmPassword: string){
+        this.ConfirmPasswordtxt.type(confirmPassword);
+    }
+  
 
 }
 
