@@ -74,20 +74,7 @@ class registerPage {
             expect($input[0].validationMessage).to.eq(errorMessage);
           })
     }
-
-    public validationEmailSuccessMessage(successMessage: String) {
-        this.REGISTER_SUCCESS_MESSAGE.should('have.text',successMessage);
-    }
-
-    public enterToFirstnametxt(firstName: string){
-        this.Firstnametxt.type(firstName);
-    }
-    public enterToMiddlenametxt(middleName: string){
-        this.Middlenametxt.type(middleName);
-    }
-    public enterToLastnametxt(lastName: string){
-        this.Lastnametxt.type(lastName);
-    }
+    
     public enterToEmailtxt(email: string){
         this.Emailtxt.type(email + cy.emailID_Alpha_Numeric +'@qa.team');
     }
