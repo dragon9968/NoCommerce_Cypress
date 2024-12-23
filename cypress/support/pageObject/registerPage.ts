@@ -48,18 +48,18 @@ class registerPage {
     }
  
 
-    public register_account(firstName: string, middleName: string, lastName: string, email: string, password: string, confirmPassword: string){
+/*     public register_account(firstName: string, middleName: string, lastName: string, email: string, password: string, confirmPassword: string){
         this.Firstnametxt.type(firstName);
         this.Middlenametxt.type(middleName);
         this.Lastnametxt.type(lastName);
-        this.Emailtxt.type(email + cy.emailID_Alpha_Numeric +'@qa.team');
+        this.Emailtxt.type(email + this.emailID_Alpha_Numeric() +'@qa.team');
         this.Passwordtxt.type(password);
         this.ConfirmPasswordtxt.type(confirmPassword);
         this.Subcribedchk.click();
         cy.wait(2000);
         this.Registerbtn.click();
     }
-    
+     */
     public validationRegisterError(errorMessage: String) {
         this.FIRST_NAME_ERROR_MESSAGE.should('have.text',errorMessage);
         this.LAST_NAME_ERROR_MESSAGE.should('have.text',errorMessage);
@@ -74,17 +74,33 @@ class registerPage {
             expect($input[0].validationMessage).to.eq(errorMessage);
           })
     }
+
+    public validationEmailSuccessMessage(successMessage: String) {
+        this.REGISTER_SUCCESS_MESSAGE.should('have.text',successMessage);
+    }
     
+    public enterToFirstnametxt(firstName: string){
+        this.Firstnametxt.type(firstName);
+    }
+    public enterToLastametxt(lastName: string){
+        this.Lastnametxt.type(lastName);
+    }
+    public enterToMiddlenametxt(middleName: string){
+        this.Middlenametxt.type(middleName);
+    }
     public enterToEmailtxt(email: string){
-        this.Emailtxt.type(email + cy.emailID_Alpha_Numeric +'@qa.team');
+        this.Emailtxt.type(email);
     }
-    public enterToPasswordtxt(password: string){
-        this.Passwordtxt.type(password);
-    }
-    public enterToConfirmPasswordtxt(confirmPassword: string){
-        this.ConfirmPasswordtxt.type(confirmPassword);
-    }
-  
+
+    public emailID_Alpha_Numeric() {
+        var text = "";
+        var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    
+        for (var i = 0; i < 5; i++)
+          text += possible.charAt(Math.floor(Math.random() * possible.length));
+    
+        return text;
+      }
 
 }
 
