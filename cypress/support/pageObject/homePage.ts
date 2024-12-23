@@ -5,9 +5,6 @@ class homePage {
     get REGISTER_LINK() {
         return cy.get('a[title="Register"]');
     }
-    get LOGOUT_LINK() {
-        return cy.get('a[title="Log Out"]');
-    }
 
 }
     export default homePage
