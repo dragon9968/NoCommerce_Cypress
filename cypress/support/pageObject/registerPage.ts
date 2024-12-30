@@ -82,7 +82,7 @@ class registerPage {
     public enterToFirstnametxt(firstName: string){
         this.Firstnametxt.type(firstName);
     }
-    public enterToLastametxt(lastName: string){
+    public enterToLastnametxt(lastName: string){
         this.Lastnametxt.type(lastName);
     }
     public enterToMiddlenametxt(middleName: string){
@@ -90,6 +90,12 @@ class registerPage {
     }
     public enterToEmailtxt(email: string){
         this.Emailtxt.type(email);
+    }
+    public enterToPasswordtxt(password: string){
+        this.Passwordtxt.type(password);
+    }
+    public enterToConfirmPasswordtxt(confirmPassword: string){
+        this.ConfirmPasswordtxt.type(confirmPassword);
     }
 
     public emailID_Alpha_Numeric() {
